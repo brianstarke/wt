@@ -32,7 +32,7 @@ Requires git. [herdr](https://herdr.dev) is needed for `wt open` only.
 
 ### Shell integration (zsh)
 
-`wt new`, `wt cd` and `wt root` print a path to stdout. To make them actually
+`wt cd` and `wt root` print a path to stdout. To make them actually
 change your shell's directory, add to `~/.zshrc`:
 
 ```sh

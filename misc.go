@@ -35,10 +35,10 @@ var initCmd = &cobra.Command{
 			return fmt.Errorf("only zsh is supported for now")
 		}
 		fmt.Print(`# wt shell integration — eval "$(wt init zsh)"
-# Wraps the wt binary so ` + "`wt new`" + `, ` + "`wt cd`" + `, ` + "`wt root`" + ` actually change directory.
+# Wraps the wt binary so ` + "`wt cd`" + `, ` + "`wt root`" + ` actually change directory.
 wt() {
   case "$1" in
-    new|cd|root|main)
+    cd|root|main)
       local dest
       dest=$(command wt "$@") || return
       # empty output = picker aborted, stay put

@@ -14,7 +14,7 @@ var rootCmd = &cobra.Command{
 Worktrees for a repo "foo" live as siblings of it, grouped in one folder:
 foo-worktrees/<branch>/ next to foo/.
 
-Commands that "cd" (new/cd/root) print the target path to stdout so shell
+Commands that "cd" (cd/root) print the target path to stdout so shell
 integration can cd for you. Run 'wt init zsh' for the wrapper.`,
 	SilenceUsage:  true,
 	SilenceErrors: true,

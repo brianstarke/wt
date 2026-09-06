@@ -247,7 +247,7 @@ func removeWorktree(root, wdir string, wt *Worktree, force bool) error {
 		pathStyle.Render(wt.Path))
 
 	if branch != "" && localBranchExists(root, branch) {
-		if confirm(fmt.Sprintf("delete local branch %q too?", branchStyle.Render(branch))) {
+		if confirm(fmt.Sprintf("delete local branch \"%s\" too?", branchStyle.Render(branch))) {
 			if _, err := git("-C", root, "branch", "-d", branch); err != nil {
 				_, _ = git("-C", root, "branch", "-D", branch)
 			}
